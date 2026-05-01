@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "C:\Users\linge\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\linge\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\linge\Downloads\voiceinvoice\voiceinvoice\backend\app\api\analytics.py", line 72, in get_stats
+    top_products = query_db(sql_products, [company_id])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\linge\Downloads\voiceinvoice\voiceinvoice\backend\app\db.py", line 195, in query_db
+    raise e
+  File "C:\Users\linge\Downloads\voiceinvoice\voiceinvoice\backend\app\db.py", line 174, in query_db
+    cur.execute(query, args)
+  File "C:\Users\linge\AppData\Local\Programs\Python\Python311\Lib\site-packages\psycopg2\extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.AmbiguousColumn: column reference "total_amount" is ambiguous
+LINE 5:             SUM(total_amount) as total_sales
+                        ^
+
